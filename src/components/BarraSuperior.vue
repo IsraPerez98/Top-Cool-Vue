@@ -2,7 +2,7 @@
   <div class="barra-superior">
         <b-navbar toggleable="lg" type="dark" variant="dark" fixed="top">
             <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
-            <b-navbar-brand href="#" style="width:300px" >Top-Cool</b-navbar-brand>
+            <b-navbar-brand href="/" style="width:300px" >Top-Cool</b-navbar-brand>
             <b-collapse id="nav-collapse" is-nav>
                 <b-navbar-nav class="mx-auto">
                     <b-nav-form>
@@ -12,9 +12,15 @@
                 </b-navbar-nav>
 
                 <b-navbar-nav style="width:300px">
-                    <b-nav-item href="#">Productos</b-nav-item>
-                    <b-nav-item href="#">Acerca De</b-nav-item>
-                    <b-nav-item href="#">Contacto</b-nav-item>
+                    <li class="nav-item">
+                        <router-link class="nav-link" active-class="active" to="/" exact>Productos</router-link>
+                    </li>
+                    <li class="nav-item">
+                        <router-link class="nav-link" active-class="active" to="/acerca" >Acerca De</router-link>
+                    </li>
+                    <li class="nav-item">
+                        <router-link class="nav-link" active-class="active" to="/contacto" >Contacto</router-link>
+                    </li>
                 </b-navbar-nav>
             </b-collapse>
         </b-navbar>

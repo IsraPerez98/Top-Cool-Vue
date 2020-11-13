@@ -1,20 +1,17 @@
 <template>
   <div id="app">
     <BarraSuperior/>
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 import BarraSuperior from './components/BarraSuperior.vue'
 
 export default {
   name: 'App',
   components: {
     BarraSuperior,
-    HelloWorld,
   }
 }
 </script>
