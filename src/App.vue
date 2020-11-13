@@ -2,16 +2,19 @@
   <div id="app">
     <BarraSuperior/>
     <router-view></router-view>
+    <BarraInferior/>
   </div>
 </template>
 
 <script>
 import BarraSuperior from './components/BarraSuperior.vue'
+import BarraInferior from './components/BarraInferior.vue'
 
 export default {
   name: 'App',
   components: {
     BarraSuperior,
+    BarraInferior,
   }
 }
 </script>
