@@ -25,7 +25,7 @@ export default {
     .barra-inferior {
       background-color: var(--secondary);
       color: white;
-      position: fixed;
+      position: static;
       width: 100%;
       bottom: 0;
 
