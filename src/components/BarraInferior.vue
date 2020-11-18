@@ -3,7 +3,7 @@
         <b-row class="mx-auto">
             <h3 class="mx-auto">Top Cool © {{new Date().getFullYear()}} | Powered by Grupo 4 TSI UTEM</h3>
             <div class="iconos-redes mx-auto">
-                <font-awesome-icon class="mr-2 ml-2" :icon="{ prefix: 'fab', iconName: 'instagram-square' } " size="3x"/>
+                <a href="https://www.instagram.com/topcoolmoda/" target="_blank" ><font-awesome-icon v-b-tooltip.hover.top="'Siguenos en nuestro Instagram!'" class="mr-2 ml-2" :icon="{ prefix: 'fab', iconName: 'instagram-square' } " size="3x"/></a>
                 <font-awesome-icon class="mr-2 ml-2" :icon="{ prefix: 'fab', iconName: 'facebook-square' } " size="3x"/>
                 <font-awesome-icon class="mr-2 ml-2" :icon="{ prefix: 'fab', iconName: 'twitter-square' } " size="3x"/>
             </div>
@@ -23,10 +23,16 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
     .barra-inferior {
-            background-color: var(--secondary);
-            color: white;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
+      background-color: var(--secondary);
+      color: white;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+
+      a:link, a:visited {
+        color: white;
+        text-align: center;
+        text-decoration: none;
+      }
+    }
 </style>
