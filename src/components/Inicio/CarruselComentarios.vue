@@ -7,7 +7,7 @@
       :interval="4000"
       controls
       indicators
-      background="#ababab"
+      background="#343a40"
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd"
       >
@@ -60,11 +60,11 @@ export default {
         margin: auto;
         width: 90%;
         margin-bottom: 10px;
+        color: white;
         .texto {
             height: fit-content;
             margin-top: 20px;
             margin-bottom: 50px;
-            color: white;
             width: 80%;
             margin-left: auto;
             margin-right: auto;
