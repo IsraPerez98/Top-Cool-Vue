@@ -1,7 +1,7 @@
 <template>
   <div class="seccion-productos">
     <router-link class="nav-link" active-class="active" to="/productos">
-        <b-card img-src="https://placekitten.com/1000/300" img-alt="Card image" img-top>
+        <b-card img-src="https://www.concierto.cl/wp-content/uploads/2020/01/huevito-rey.jpg" img-alt="Card image" img-top>
             <b-card-text>
                 {{nombreSeccion}}
             </b-card-text>
