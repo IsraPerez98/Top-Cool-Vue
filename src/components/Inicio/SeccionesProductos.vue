@@ -4,6 +4,7 @@
         <b-col v-for="(seccion, index) in seccionesDisponibles" :key="index">
             <SeccionProductos
                 v-bind:nombreSeccion="seccion.nombreSeccion"
+                v-bind:imagenSeccion="seccion.imagenSeccion"
             />
         </b-col>
     </b-container>
