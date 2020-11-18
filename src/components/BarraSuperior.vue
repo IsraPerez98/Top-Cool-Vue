@@ -13,7 +13,10 @@
 
                 <b-navbar-nav >
                     <li class="nav-item">
-                        <router-link class="nav-link" active-class="active" to="/" exact>Productos</router-link>
+                        <router-link class="nav-link" active-class="active" to="/" exact>Inicio</router-link>
+                    </li>
+                    <li class="nav-item">
+                        <router-link class="nav-link" active-class="active" to="/productos">Productos</router-link>
                     </li>
                     <li class="nav-item">
                         <router-link class="nav-link" active-class="active" to="/acerca" >Acerca De</router-link>
