@@ -1,6 +1,7 @@
 <template>
   <div class="inicio">
     <b-container class="secciones-productos">
+        <CarruselDestacados />
         <SeccionesProductos 
             v-bind:seccionesDisponibles="seccionesDisponibles"
         />
@@ -12,11 +13,13 @@
 
 // @ is an alias to /src
 import SeccionesProductos from '@/components/Inicio/SeccionesProductos.vue'
+import CarruselDestacados from '@/components/Inicio/CarruselDestacados.vue'
 
 export default {
   name: 'Inicio',
   components: {
       SeccionesProductos,
+      CarruselDestacados,
   },
   data: () => {
     return {
