@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Inicio from '../views/Inicio.vue'
 import Productos from '../views/Productos.vue'
+import Producto from '../views/Producto.vue'
 
 Vue.use(VueRouter)
 
@@ -15,6 +16,9 @@ const routes = [
     path: '/productos',
     name: 'Productos',
     component: Productos,
+  },
+  { path: '/producto/:id', 
+    component: Producto
   },
   {
     path: '/about',
