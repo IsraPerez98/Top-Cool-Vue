@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Inicio from '../views/Inicio.vue'
 import Productos from '../views/Productos.vue'
 import Producto from '../views/Producto.vue'
+import Carrito from '../views/Carrito'
 
 Vue.use(VueRouter)
 
@@ -19,6 +20,10 @@ const routes = [
   },
   { path: '/producto/:id', 
     component: Producto
+  },
+  {
+    path: '/carrito/',
+    component: Carrito,
   },
   {
     path: '/about',

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <BarraSuperior/>
-    <router-view></router-view>
+    <router-view :carrito="carrito"></router-view>
     <BarraInferior/>
   </div>
 </template>
@@ -15,7 +15,20 @@ export default {
   components: {
     BarraSuperior,
     BarraInferior,
-  }
+  },
+  data: () => {
+    return {
+        carrito : [
+          {
+            idProducto: "1",
+            nombreProducto: "abrigo",
+            imagenProducto: "",
+            tallasProducto: ["s", "xl"],
+            precioProducto: "8000",
+          }
+        ],
+    }
+  },
 }
 </script>
 
