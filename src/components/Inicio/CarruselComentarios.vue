@@ -59,12 +59,18 @@ export default {
     .comentarios-destacados {
         margin: auto;
         width: 90%;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
+        margin-top: 50px;
         color: white;
+
+        h2 {
+          color: black;
+        }
+
         .texto {
             height: fit-content;
-            margin-top: 20px;
-            margin-bottom: 50px;
+            margin-top: 50px;
+            margin-bottom: 80px;
             width: 80%;
             margin-left: auto;
             margin-right: auto;
