@@ -8,8 +8,8 @@
       controls
       indicators
       background="#ababab"
-      img-width="1024"
-      img-height="10"
+      img-width="640"
+      img-height="480"
       style="text-shadow: 1px 1px 2px #333;"
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd"
@@ -28,6 +28,10 @@
 <script>
 // @ is an alias to /src
 
+import imagenTejidos from '@/assets/imgs/Inicio/CarruselDestacados/Tejidos.png'
+import imagenCartera from '@/assets/imgs/Inicio/CarruselDestacados/Cartera.png'
+import imagenPets from '@/assets/imgs/Inicio/CarruselDestacados/Pets.png'
+
 
 export default {
   name: 'CarruselDestacados',
@@ -35,19 +39,19 @@ export default {
     return {
       productos_destacados: [
         {
-            nombreProducto: "ola",
-            descripcionProducto: "xde",
-            imagenProducto: "https://talcans.cl/uploads/file_1528057544.png",
+            nombreProducto: "Tejidos Artesanales",
+            descripcionProducto: "",
+            imagenProducto: imagenTejidos,
         },
         {
-            nombreProducto: "adsfadfs",
-            descripcionProducto: "xde",
-            imagenProducto: "https://www.eldinamo.cl/wp-content/uploads/2016/03/CHOCHE.jpg",
+            nombreProducto: "Cartera",
+            descripcionProducto: "",
+            imagenProducto: imagenCartera,
         },
         {
-            nombreProducto: "adsfadfs",
-            descripcionProducto: "xde",
-            imagenProducto: "https://media.biobiochile.cl/wp-content/uploads/2020/01/captura.jpeg",
+            nombreProducto: "Articulos de Mascotas",
+            descripcionProducto: "",
+            imagenProducto: imagenPets,
         },
       ]
     }
@@ -58,4 +62,21 @@ export default {
 </script>
 
 <style scoped lang="scss">
+  .productos-destacados {
+    background-color: #2c3e50;
+    width: 100%;
+    margin-left: 0;
+    padding-top: 10px;
+    padding-bottom: 50px;
+
+    h2 {
+      color: white;
+    }
+    .carousel {
+      margin: auto;
+      max-height: 480px;
+      max-width: 820px;
+    }
+  }
+  
 </style>
