@@ -1,12 +1,15 @@
 <template>
   <div class="secciones-productos">
-    <b-container>
-        <b-col v-for="(seccion, index) in seccionesDisponibles" :key="index">
+    <h2>Nuestras Secciones Destacadas:</h2>
+    <b-container fluid="xl">
+      <b-row>
+        <b-col lg="6" v-for="(seccion, index) in seccionesDisponibles" :key="index">
             <SeccionProductos
                 v-bind:nombreSeccion="seccion.nombreSeccion"
                 v-bind:imagenSeccion="seccion.imagenSeccion"
             />
         </b-col>
+      </b-row>
     </b-container>
   </div>
 </template>
@@ -15,7 +18,13 @@
 
 // @ is an alias to /src
 
-import SeccionProductos from './SeccionProductos.vue';
+import SeccionProductos from './SeccionProductos.vue'
+
+import imagenMasVendidos from '@/assets/imgs/Inicio/SeccionesProductos/MasVendidos.png'
+import imagenBlusas from '@/assets/imgs/Inicio/SeccionesProductos/Blusas.png'
+//import imagenProfe from '@/assets/imgs/Inicio/SeccionesProductos/Profe.png'
+import imagenChaquetas from '@/assets/imgs/Inicio/SeccionesProductos/Chaquetas.png'
+import imagenPantalones from '@/assets/imgs/Inicio/SeccionesProductos/Pantalones.png'
 
 export default {
   name: 'Inicio',
@@ -26,19 +35,38 @@ export default {
     return {
       seccionesDisponibles: [
         {
-            nombreSeccion: "ola",
-            imagenSeccion: "https://www.concierto.cl/wp-content/uploads/2020/01/huevito-rey.jpg",
+            nombreSeccion: "Los Mas Vendidos",
+            imagenSeccion: imagenMasVendidos,
         },
         {
-            nombreSeccion: "adios xd",
-            imagenSeccion: "https://img.discogs.com/qfFnZ6C7Q4_A9SQXFdqHvHxM3wQ=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/L-1729366-1600126773-5014.jpeg.jpg",
+            nombreSeccion: "Blusas",
+            imagenSeccion: imagenBlusas,
         },
         {
-            nombreSeccion: "que pasa larva xd",
-            imagenSeccion: "https://i.ytimg.com/vi/bNq_wjvwb0M/hqdefault.jpg",
+            nombreSeccion: "Chaquetas",
+            imagenSeccion: imagenChaquetas,
+        },
+        {
+            nombreSeccion: "Pantalones",
+            imagenSeccion: imagenPantalones,
         },
       ]
     }
   }
 }
 </script>
+
+
+<style scoped lang="scss">
+  .secciones-productos {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+    h2 {
+      color: black;
+    }
+
+  }
+  
+</style>
