@@ -65,6 +65,7 @@ export default {
   .productos-destacados {
     background-color: #2c3e50;
     width: 100%;
+    margin-top: 80px;
     margin-left: 0;
     padding-top: 10px;
     padding-bottom: 50px;
