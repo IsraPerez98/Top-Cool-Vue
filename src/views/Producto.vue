@@ -39,6 +39,11 @@
       <b-button variant="outline-primary">Deja tu Comentario</b-button>
       <b-button variant="success" v-on:click="agregarACarrito" >Agregar al Carro</b-button>
     </b-container>
+    <div class="alert alert-primary" role="alert" v-if="enCarro > 0">
+      <router-link class="nav-link" active-class="active" to="/carrito" >
+      Se han agregado {{enCarro}} al Carrito de compras!
+      </router-link>
+    </div>
   </b-container>
 </template>
 
@@ -60,6 +65,7 @@ export default {
     agregarACarrito: function(event) {
       //console.log(this.carrito)
       this.carrito.push(this.dataProducto)
+      this.enCarro++
       console.log(this.carrito)
       if(event) {
         console.log(event)
@@ -81,6 +87,7 @@ export default {
 
     let data = {
       imagenSeleccionada: 0,
+      enCarro: 0,
       infoExtra: "Estamos ubicados en Av.Alguna #3722 en el 4to piso del edificio B en la habitacion 453 pero podemos mandar a domicilio tu pedido.",
       dataProducto: {},
     }
