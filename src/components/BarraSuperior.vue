@@ -27,6 +27,9 @@
                     <li class="nav-item">
                         <router-link class="nav-link" active-class="active" to="/contacto" >Contacto</router-link>
                     </li>
+                    <li class="nav-item">
+                        <router-link class="nav-link" active-class="active" to="/carrito" >Carrito</router-link>
+                    </li>
                 </b-navbar-nav>
             </b-collapse>
         </b-navbar>
