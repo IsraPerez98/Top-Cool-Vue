@@ -9,6 +9,7 @@
           v-bind:tallas="producto.tallas"
           v-bind:precio="producto.precio"
           v-bind:preciosEspeciales="producto.preciosEspeciales"
+          v-bind:id="producto.id"
         />
       </li>
     </ul>

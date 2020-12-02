@@ -1,6 +1,7 @@
 <template>
   <div class="producto">
     <b-container class="bg-secondary" >
+      <router-link class="nav-link" active-class="active" v-bind:to="'/producto/' + id">
       <b-row align-h="between">
         <b-column>
           <ul id="imagenes" style="list-style-type:none; padding:0;">
@@ -30,6 +31,7 @@
           <h3>Precio: {{precio}}</h3>
         </b-column>
       </b-row>
+      </router-link> 
     </b-container>
   </div>
 </template>
@@ -44,6 +46,7 @@ export default {
     tallas: Array,
     precio: Number,
     preciosEspeciales: Array, // [{"Por Mayor": 5900}, {etc}]
+    id: Number,
   }
 }
 
@@ -66,7 +69,11 @@ export default {
       color: white;
       text-align: center;
 
-      b-column {
+      .nav-link {
+        text-decoration: none;
+        color: white;
+
+        b-column {
         margin: auto;
         padding-top: 10px;
         padding-bottom: 10px;
@@ -80,6 +87,8 @@ export default {
           }
         }
       }
+      }
+
     }
   }
 </style>
