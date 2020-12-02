@@ -19,13 +19,6 @@ export default {
   data: () => {
     return {
         carrito : [
-          {
-            idProducto: "1",
-            nombreProducto: "abrigo",
-            imagenProducto: "",
-            tallasProducto: ["s", "xl"],
-            precioProducto: "8000",
-          }
         ],
     }
   },

@@ -37,7 +37,7 @@
     </b-row>
     <b-container class="botones">
       <b-button variant="outline-primary">Deja tu Comentario</b-button>
-      <b-button variant="success">Agregar al Carro</b-button>
+      <b-button variant="success" v-on:click="agregarACarrito" >Agregar al Carro</b-button>
     </b-container>
   </b-container>
 </template>
@@ -52,6 +52,19 @@ export default {
   name: 'Producto',
   components: {
 
+  },
+  props : {
+    carrito: Array,
+  },
+  methods: {
+    agregarACarrito: function(event) {
+      //console.log(this.carrito)
+      this.carrito.push(this.dataProducto)
+      console.log(this.carrito)
+      if(event) {
+        console.log(event)
+      }
+    }
   },
   data: function() {
 
