@@ -1,5 +1,5 @@
 <template>
-    <b-container class="carrito">
+    <b-container v-if="carrito.length > 0" class="carrito">
       <h1 class="titulo">Productos en tu carrito de compras</h1>
       <b-container class="productos" id="carrito" >
         <b-row class="row-producto" v-for="(producto, index) in carrito" v-bind:key="index">
@@ -22,6 +22,13 @@
           <button type="button" class="btn seguir btn-secondary">Seguir Comprando</button>
         </router-link>
       </b-row>
+    </b-container>
+    <b-container v-else class="carrito-vacio">
+      <h1 class="titulo">Tu carrito está vacio</h1>
+      <h2 class="mensaje">Revisa nuestro catalogo de productos</h2>
+      <router-link class="nav-link" active-class="active" to="/productos">
+        <button type="button" class="btn productos btn-secondary">Productos</button>
+      </router-link>
     </b-container>
 </template>
 
