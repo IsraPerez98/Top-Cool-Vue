@@ -3,7 +3,6 @@
       <h2>Productos destacados de la semana</h2>
       <b-carousel
       id="carrusel-destacados"
-      v-model="slide"
       :interval="4000"
       controls
       indicators
@@ -11,8 +10,6 @@
       img-width="640"
       img-height="480"
       style="text-shadow: 1px 1px 2px #333;"
-      @sliding-start="onSlideStart"
-      @sliding-end="onSlideEnd"
       >
       <b-carousel-slide v-for="(producto, index) in productos_destacados" v-bind:key="index"
         v-bind:caption="producto.nombreProducto"

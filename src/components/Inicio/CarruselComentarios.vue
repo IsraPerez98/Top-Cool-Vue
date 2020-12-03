@@ -3,13 +3,10 @@
       <h2>Comentarios de nuestros clientes</h2>
       <b-carousel
       id="carrusel-comentarios"
-      v-model="slide"
       :interval="4000"
       controls
       indicators
       background="#343a40"
-      @sliding-start="onSlideStart"
-      @sliding-end="onSlideEnd"
       >
       <b-carousel-slide v-for="(comentario, index) in comentarios_destacados " v-bind:key="index">
           <template #img>
