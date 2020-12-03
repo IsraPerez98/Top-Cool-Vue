@@ -24,6 +24,28 @@ export default {
         ],
     }
   },
+  methods: {
+    guardarCarrito: function() {
+      if(this.carrito) {
+        localStorage.setItem('carrito', JSON.stringify(this.carrito))
+      } else {
+        localStorage.setItem('carrito', JSON.stringify([]))
+      }
+      //console.log(this.carrito)
+    },
+    cargarCarrito: function() {
+      this.carrito = JSON.parse(localStorage.getItem('carrito'))
+      //console.log(this.carrito)
+    }
+  },
+  created() {
+    this.cargarCarrito()
+  },
+  watch: {
+    carrito: function () {
+      this.guardarCarrito()
+    }
+  },
 }
 </script>
 
