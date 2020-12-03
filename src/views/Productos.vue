@@ -35,8 +35,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  .productos {
-    padding-top: 30px;
-  }
   
 </style>

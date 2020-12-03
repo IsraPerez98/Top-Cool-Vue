@@ -1,6 +1,6 @@
 <template>
   <div class="inicio">
-    <b-container class="secciones-productos mt-lg-0" fluid>
+    <b-container class="secciones-productos" fluid>
         <CarruselDestacados />
         <SeccionesProductos />
         <CarruselComentarios />
@@ -28,5 +28,5 @@ export default {
 
 
 <style scoped lang="scss">
-  
+
 </style>
