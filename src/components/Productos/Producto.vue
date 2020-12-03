@@ -3,14 +3,14 @@
     <b-container class="bg-secondary" >
       <router-link class="nav-link" active-class="active" v-bind:to="'/producto/' + id">
       <b-row align-h="between">
-        <b-column>
+        <b-col class="columna">
           <ul id="imagenes" style="list-style-type:none; padding:0;">
             <li v-for="(imagen, index) in imagenes" v-bind:key="index">
               <b-img height="200px" v-bind:alt="nombre" v-bind:src="imagen"></b-img>
             </li>
           </ul>
-        </b-column>
-        <b-column style="width: 50%;">
+        </b-col>
+        <b-col class="columna" style="width: 50%;">
           <h3>{{nombre}}</h3>
           <p class="descripcion">{{descripcion}}</p>
           <p class="tallas">Tallas: </p>
@@ -19,8 +19,8 @@
               {{talla.toUpperCase()}}
             </li>
           </ul>
-        </b-column>
-        <b-column>
+        </b-col>
+        <b-col class="columna">
           <ul class="precios-especiales" id="preciosEspeciales" style="list-style-type:none; padding:0;">
             <li v-for="(data, index) in preciosEspeciales" v-bind:key="index">
               <h3 v-for="(precio, texto) in data" v-bind:key="texto">
@@ -29,7 +29,7 @@
             </li>
           </ul>
           <h3>Precio: {{precio}}</h3>
-        </b-column>
+        </b-col>
       </b-row>
       </router-link> 
     </b-container>
@@ -73,7 +73,7 @@ export default {
         text-decoration: none;
         color: white;
 
-        b-column {
+        .columna {
         margin: auto;
         padding-top: 10px;
         padding-bottom: 10px;
