@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <BarraSuperior/>
-    <router-view :carrito="carrito"></router-view>
+    <div class="contenido">
+      <router-view :carrito="carrito"></router-view>
+    </div>
     <BarraInferior/>
   </div>
 </template>
@@ -25,7 +27,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -33,6 +35,10 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-  background-color: #FAE8FF;;
+  background-color: #FAE8FF;
+
+  .contenido {
+    min-height: calc(100vh - 109px);
+  }
 }
 </style>
