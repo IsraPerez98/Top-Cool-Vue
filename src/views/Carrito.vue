@@ -84,7 +84,8 @@ export default {
         padding: 10px;
         .btn-eliminar {
           margin: auto;
-          max-height: 40px;
+          border-radius: 4px;
+          border: none;
         }
       }
     }
