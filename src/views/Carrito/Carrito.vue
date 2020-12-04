@@ -17,7 +17,9 @@
       </b-container>
       <h2>Precio Total: {{precioTotal}} </h2>
       <b-row class="botones">
-        <button type="button" class="btn pagar btn-success">Pagar</button>
+        <router-link class="nav-link" active-class="active" to="/carrito/pagar">
+          <button type="button" class="btn pagar btn-success">Pagar</button>
+        </router-link>
         <router-link class="nav-link" active-class="active" to="/productos">
           <button type="button" class="btn seguir btn-secondary">Seguir Comprando</button>
         </router-link>
