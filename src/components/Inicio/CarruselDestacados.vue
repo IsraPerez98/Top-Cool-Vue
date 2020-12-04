@@ -11,11 +11,20 @@
       img-height="480"
       style="text-shadow: 1px 1px 2px #333;"
       >
-      <b-carousel-slide v-for="(producto, index) in productos_destacados" v-bind:key="index"
-        v-bind:caption="producto.nombreProducto"
-        v-bind:text="producto.descripcionProducto"
-        v-bind:img-src="producto.imagenProducto"
-      >
+      <b-carousel-slide v-for="(producto, index) in productos_destacados" v-bind:key="index">
+        <template #img>
+           <router-link class="nav-link" active-class="active" v-bind:to="'/producto/' + producto.id">
+             <img
+              class="imagen-producto"
+              width="640"
+              height="360"
+              v-bind:src="producto.imagenes[0]"
+              alt="image slot"
+            >
+            <h2 class="titulo">{{producto.nombre}}</h2> 
+           </router-link>
+          
+        </template>
       </b-carousel-slide>
 
       </b-carousel>
@@ -25,9 +34,7 @@
 <script>
 // @ is an alias to /src
 
-import imagenTejidos from '@/assets/imgs/Inicio/CarruselDestacados/Tejidos.png'
-import imagenCartera from '@/assets/imgs/Inicio/CarruselDestacados/Cartera.png'
-import imagenPets from '@/assets/imgs/Inicio/CarruselDestacados/Pets.png'
+import productos from '@/productos.js'
 
 
 export default {
@@ -35,21 +42,8 @@ export default {
   data: () => {
     return {
       productos_destacados: [
-        {
-            nombreProducto: "Tejidos Artesanales",
-            descripcionProducto: "",
-            imagenProducto: imagenTejidos,
-        },
-        {
-            nombreProducto: "Cartera",
-            descripcionProducto: "",
-            imagenProducto: imagenCartera,
-        },
-        {
-            nombreProducto: "Articulos de Mascotas",
-            descripcionProducto: "",
-            imagenProducto: imagenPets,
-        },
+        productos[0],
+        productos[1],
       ]
     }
   },
@@ -72,8 +66,11 @@ export default {
     }
     .carousel {
       margin: auto;
-      max-height: 480px;
       max-width: 820px;
+
+      .nav-link {
+        padding-bottom: 40px;
+      }
     }
   }
   
