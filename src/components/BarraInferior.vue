@@ -1,8 +1,8 @@
 <template>
   <footer class="barra-inferior mb-0">
         <b-row class="mx-auto">
-            <h3 class="mx-auto">Top Cool © {{new Date().getFullYear()}} | Powered by Grupo 4 TSI UTEM</h3>
-            <div class="iconos-redes mx-auto">
+            <h6 class="mx-3 my-auto">Top Cool © {{new Date().getFullYear()}} | Powered by Grupo 4 TSI UTEM</h6>
+            <div class="iconos-redes derecha">
                 <a href="https://www.instagram.com/topcoolmoda/" target="_blank" ><font-awesome-icon v-b-tooltip.hover.top="'Siguenos en nuestro Instagram!'" class="mr-2 ml-2" :icon="{ prefix: 'fab', iconName: 'instagram-square' } " size="3x"/></a>
                 <font-awesome-icon class="mr-2 ml-2" :icon="{ prefix: 'fab', iconName: 'facebook-square' } " size="3x"/>
                 <font-awesome-icon class="mr-2 ml-2" :icon="{ prefix: 'fab', iconName: 'twitter-square' } " size="3x"/>
@@ -29,10 +29,15 @@ export default {
       width: 100%;
       bottom: 0;
 
+      .derecha{
+        margin-left: auto;
+      }
+
       a:link, a:visited {
         color: white;
         text-align: center;
         text-decoration: none;
       }
     }
+    
 </style>
