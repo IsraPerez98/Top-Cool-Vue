@@ -5,6 +5,7 @@ import Productos from '../views/Productos.vue'
 import Producto from '../views/Producto.vue'
 import Carrito from '../views/Carrito/Carrito.vue'
 import Pagar from '../views/Carrito/Pagar.vue'
+import Contacto from '../views/Contacto.vue'
 
 Vue.use(VueRouter)
 
@@ -33,6 +34,11 @@ const routes = [
     path: '/carrito/pagar/',
     name: 'Pagar',
     component: Pagar,
+  },
+  {
+    path: '/contacto/',
+    name: 'Contacto',
+    component: Contacto,
   },
   {
     path: '/about',
