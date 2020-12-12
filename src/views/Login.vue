@@ -45,7 +45,7 @@ export default {
     },
     props: {
         usuario: String,
-        logout: Object,
+        logout: Function,
     },
     methods: {
       login(evt) {

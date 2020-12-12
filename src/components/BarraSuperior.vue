@@ -56,7 +56,7 @@ export default {
   name: 'BarraSuperior',
   props: {
       usuario: String,
-      logout: Object,
+      logout: Function,
   }
 }
 </script>
