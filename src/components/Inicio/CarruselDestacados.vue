@@ -6,7 +6,6 @@
       :interval="4000"
       controls
       indicators
-      background="#ababab"
       img-width="640"
       img-height="480"
       style="text-shadow: 1px 1px 2px #333;"
@@ -55,9 +54,9 @@ export default {
 <style scoped lang="scss">
   .productos-destacados {
     background-color: #2c3e50;
-    width: 100%;
+    width: 90%;
+    margin: auto;
     margin-top: 0px;
-    margin-left: 0;
     padding-top: 10px;
     padding-bottom: 50px;
 
