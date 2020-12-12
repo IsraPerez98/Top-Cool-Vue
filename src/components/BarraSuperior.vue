@@ -32,6 +32,9 @@
                     <li class="nav-item">
                         <router-link class="nav-link" active-class="active" to="/carrito" >Carrito</router-link>
                     </li>
+                    <li class="nav-item panel-admin" v-if="usuario_admin">
+                        <router-link class="nav-link" active-class="active" to="/admin" >Panel Admin</router-link>
+                    </li>
                     <li class="nav-item usuario" v-if="usuario">
                         {{usuario}}
                     </li>
@@ -56,6 +59,7 @@ export default {
   name: 'BarraSuperior',
   props: {
       usuario: String,
+      usuario_admin: Boolean,
       logout: Function,
   }
 }
