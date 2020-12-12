@@ -1,6 +1,6 @@
 <template>
   <div class="login" >
-        <b-form @submit.prevent="onSubmit" v-if="!(logeado)">
+        <b-form @submit.prevent="login" v-if="!(usuario)">
             <b-form-group id="grupo-entrada-1" label="Usuario:" label-for="entrada-1" >
                 <b-form-input
                 id="entrada-1"
@@ -41,18 +41,16 @@ export default {
           usuario: '',
           password: '',
         },
-        logeado: localStorage.getItem('usuario'),
       }
     },
+    props: {
+        usuario: String,
+        logout: Object,
+    },
     methods: {
-      onSubmit(evt) {
+      login(evt) {
           console.log(evt)
           localStorage.setItem('usuario', this.form.usuario) // xd
-          this.$router.push('/')
-      },
-      logout(evt) {
-          console.log(evt)
-          localStorage.removeItem('usuario')
           this.$router.push('/')
       },
     },

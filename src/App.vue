@@ -1,8 +1,11 @@
 <template>
   <div id="app">
-    <BarraSuperior/>
+    <BarraSuperior
+      v-bind:usuario="usuario"
+      v-bind:logout="logout"
+    />
     <div class="contenido">
-      <router-view :carrito="carrito"></router-view>
+      <router-view :logout="logout" :usuario="usuario" :carrito="carrito"></router-view>
     </div>
     <BarraInferior/>
   </div>
@@ -22,6 +25,7 @@ export default {
     return {
         carrito : [
         ],
+        usuario: localStorage.getItem('usuario')
     }
   },
   methods: {
@@ -36,14 +40,25 @@ export default {
     cargarCarrito: function() {
       this.carrito = JSON.parse(localStorage.getItem('carrito'))
       //console.log(this.carrito)
+    },
+    cargarUsuario: function() {
+      this.usuario = localStorage.getItem('usuario')
+    },
+    logout: function() {
+      localStorage.removeItem('usuario')
+      this.cargarUsuario()
     }
   },
   created() {
     this.cargarCarrito()
+    this.cargarUsuario()
   },
   watch: {
     carrito: function () {
       this.guardarCarrito()
+    },
+    $route (){
+        this.cargarUsuario() // revisamos el usuario cada vez que el route cambia
     }
   },
 }

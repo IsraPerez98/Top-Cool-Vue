@@ -54,23 +54,10 @@
 <script>
 export default {
   name: 'BarraSuperior',
-  data: function() {
-      return {
-          usuario: localStorage.getItem('usuario'),
-      }
-  },
-  methods: {
-      logout: function(evt) {
-          console.log(evt)
-          localStorage.removeItem('usuario')
-          this.usuario = localStorage.getItem('usuario')
-      },
-  },
-  watch:{
-    $route (){
-        this.usuario = localStorage.getItem('usuario') // revisamos el usuario cada vez que el route cambia
-    }
-  },
+  props: {
+      usuario: String,
+      logout: Object,
+  }
 }
 </script>
 
