@@ -8,10 +8,13 @@ import router from './router'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faFacebookSquare, faInstagramSquare, faTwitterSquare } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { faAddressCard } from '@fortawesome/free-solid-svg-icons'
 
 library.add(faFacebookSquare)
 library.add(faInstagramSquare)
 library.add(faTwitterSquare)
+library.add(faAddressCard)
+
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
