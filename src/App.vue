@@ -3,9 +3,10 @@
     <BarraSuperior
       v-bind:usuario="usuario"
       v-bind:logout="logout"
+      v-bind:usuario_admin="usuario_admin"
     />
     <div class="contenido">
-      <router-view :logout="logout" :usuario="usuario" :carrito="carrito"></router-view>
+      <router-view :logout="logout" :usuario="usuario" :carrito="carrito" :usuario_admin="usuario_admin" ></router-view>
     </div>
     <BarraInferior/>
   </div>
@@ -25,7 +26,8 @@ export default {
     return {
         carrito : [
         ],
-        usuario: localStorage.getItem('usuario')
+        usuario: localStorage.getItem('usuario'),
+        usuario_admin: false, // puede ser true or false
     }
   },
   methods: {
@@ -41,8 +43,15 @@ export default {
       this.carrito = JSON.parse(localStorage.getItem('carrito'))
       //console.log(this.carrito)
     },
+    usuarioEsAdmin: function() {
+      if(this.usuario == "Admin") {
+        this.usuario_admin = true
+        console.log(this.usuario, " es admin")
+      }
+    },
     cargarUsuario: function() {
       this.usuario = localStorage.getItem('usuario')
+      this.usuarioEsAdmin()
     },
     logout: function() {
       localStorage.removeItem('usuario')
