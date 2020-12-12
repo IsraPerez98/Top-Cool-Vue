@@ -6,6 +6,7 @@ import Producto from '../views/Producto.vue'
 import Carrito from '../views/Carrito/Carrito.vue'
 import Pagar from '../views/Carrito/Pagar.vue'
 import Contacto from '../views/Contacto.vue'
+import Login from '../views/Login.vue'
 
 Vue.use(VueRouter)
 
@@ -39,6 +40,11 @@ const routes = [
     path: '/contacto/',
     name: 'Contacto',
     component: Contacto,
+  },
+  {
+    path: '/login/',
+    name: 'Login',
+    component: Login,
   },
   {
     path: '/about',
