@@ -32,6 +32,16 @@
                     <li class="nav-item">
                         <router-link class="nav-link" active-class="active" to="/carrito" >Carrito</router-link>
                     </li>
+                    <li class="nav-item usuario" v-if="usuario">
+                        {{usuario}}
+                    </li>
+                    <li class="nav-item logout" v-if="usuario">
+                        <router-link class="nav-link" active-class="active" to="/login" >Logout</router-link>
+                    </li>
+                    <li class="nav-item login" v-else>
+                        <router-link class="nav-link" active-class="active" to="/login" >Login</router-link>
+                    </li>
+                    
                 </b-navbar-nav>
             </b-collapse>
         </b-navbar>
@@ -41,9 +51,16 @@
 <script>
 export default {
   name: 'BarraSuperior',
-  props: {
-    msg: String
-  }
+  data: function() {
+      return {
+          usuario: localStorage.getItem('usuario'),
+      }
+  },
+  watch:{
+    $route (){
+        this.usuario = localStorage.getItem('usuario') // revisamos el usuario cada vez que el route cambia
+    }
+  },
 }
 </script>
 
@@ -51,5 +68,11 @@ export default {
 <style scoped lang="scss">
     .barra-superior {
         height: 0px;
+
+        .usuario {
+            color: #28a745;
+            margin: auto;
+            margin-left: 10px;
+        }
     }
 </style>
