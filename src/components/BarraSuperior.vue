@@ -21,12 +21,14 @@
                     <li class="nav-item">
                         <router-link class="nav-link" active-class="active" to="/productos">Productos</router-link>
                     </li>
+                    <!--
                     <li class="nav-item">
                         <router-link class="nav-link" active-class="active" to="/acerca" >Acerca De</router-link>
                     </li>
                     <li class="nav-item">
                         <router-link class="nav-link" active-class="active" to="/contacto" >Contacto</router-link>
                     </li>
+                    -->
                     <li class="nav-item">
                         <router-link class="nav-link" active-class="active" to="/carrito" >Carrito</router-link>
                     </li>
