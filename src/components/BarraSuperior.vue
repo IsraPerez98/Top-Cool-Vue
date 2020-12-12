@@ -36,7 +36,10 @@
                         {{usuario}}
                     </li>
                     <li class="nav-item logout" v-if="usuario">
-                        <router-link class="nav-link" active-class="active" to="/login" >Logout</router-link>
+                        <!--<router-link class="nav-link" active-class="active" to="/login" >Logout</router-link> -->
+                        <div class="boton-logout" v-on:click="logout">
+                            Logout
+                        </div>
                     </li>
                     <li class="nav-item login" v-else>
                         <router-link class="nav-link" active-class="active" to="/login" >Login</router-link>
@@ -56,6 +59,13 @@ export default {
           usuario: localStorage.getItem('usuario'),
       }
   },
+  methods: {
+      logout: function(evt) {
+          console.log(evt)
+          localStorage.removeItem('usuario')
+          this.usuario = localStorage.getItem('usuario')
+      },
+  },
   watch:{
     $route (){
         this.usuario = localStorage.getItem('usuario') // revisamos el usuario cada vez que el route cambia
@@ -70,9 +80,20 @@ export default {
         height: 0px;
 
         .usuario {
-            color: #28a745;
+            color: #007bff;
             margin: auto;
             margin-left: 10px;
+        }
+
+        .logout {
+            margin: auto;
+            padding: auto;
+            margin-left: 10px;
+            .boton-logout {
+                color: #dc3545;
+                cursor: pointer;
+                margin: auto;
+            }
         }
     }
 </style>
