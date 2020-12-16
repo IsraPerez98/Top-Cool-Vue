@@ -6,7 +6,7 @@
       v-bind:usuario_admin="usuario_admin"
     />
     <div class="contenido">
-      <router-view :logout="logout" :usuario="usuario" :carrito="carrito" :usuario_admin="usuario_admin" ></router-view>
+      <router-view :logout="logout" :usuario="usuario" :carrito="carrito" :pedidos="pedidos" :usuario_admin="usuario_admin" ></router-view>
     </div>
     <BarraInferior/>
   </div>
@@ -26,7 +26,7 @@ export default {
     return {
         carrito : [
         ],
-        pedidos: [],
+        pedidos: {},
         usuario: localStorage.getItem('usuario'),
         usuario_admin: false, // puede ser true or false
     }
@@ -34,9 +34,9 @@ export default {
   methods: {
     guardarPedidos: function() {
       if(this.pedidos) {
-        localStorage.setItem('pedidos', JSON.stringify(this.carrito))
+        localStorage.setItem('pedidos', JSON.stringify(this.pedidos))
       } else {
-        localStorage.setItem(this.pedidos, JSON.stringify([]))
+        localStorage.setItem(this.pedidos, JSON.stringify({}))
       }
     },
     cargarPedidos: function() {
