@@ -26,6 +26,8 @@ export default {
   },
   props : {
     carrito: Array,
+    usuario: String,
+    pedidos: Object,
   },
   data: function() {
     let data = {}
@@ -47,7 +49,22 @@ export default {
     });
 
     return data
-  }
+  },
+  methods: {
+      realizarPedido: function() {
+          if(!this.usuario) {
+              alert("Debe registrarse con una cuenta para realizar el pedido")
+              this.$router.push('/login/')
+          } else {
+              this.pedidos[this.usuario] = this.carrito
+              console.log(this.pedidos)
+              localStorage.setItem('pedidos', JSON.stringify(this.pedidos)) // esto esta en App.vue, pero por alguna razon el watch no funciona
+          }
+      },
+  },
+  created() {
+    this.realizarPedido()
+  },
   
 }
 </script>
