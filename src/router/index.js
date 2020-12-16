@@ -8,6 +8,7 @@ import Pagar from '../views/Carrito/Pagar.vue'
 import Contacto from '../views/Contacto.vue'
 import Login from '../views/Login.vue'
 import Admin from '../views/Admin/Admin.vue'
+import NuevoProducto from '../views/Admin/NuevoProducto.vue'
 
 Vue.use(VueRouter)
 
@@ -51,6 +52,11 @@ const routes = [
     path: '/admin/',
     name: 'Admin',
     component: Admin,
+  },
+  {
+    path: '/admin/nuevoproducto/',
+    name: 'NuevoProducto',
+    component: NuevoProducto,
   },
   {
     path: '/about',

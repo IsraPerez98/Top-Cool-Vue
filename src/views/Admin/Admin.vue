@@ -2,7 +2,9 @@
     <div class="admin-panel">
         <NoAdmin v-if="!(usuario_admin)" />
         <div class="admin" v-else>
-            <b-button variant="primary">Agregar Producto</b-button>
+            <router-link class="nav-link" active-class="active" to="/admin/nuevoproducto/">
+                <b-button variant="primary">Agregar Producto</b-button>
+            </router-link>
             <b-button variant="primary">Ver Pedidos</b-button>
         </div>
     </div>
