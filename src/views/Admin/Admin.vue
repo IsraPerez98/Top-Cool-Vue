@@ -5,7 +5,9 @@
             <router-link class="nav-link" active-class="active" to="/admin/nuevoproducto/">
                 <b-button variant="primary">Agregar Producto</b-button>
             </router-link>
-            <b-button variant="primary">Ver Pedidos</b-button>
+            <router-link class="nav-link" active-class="active" to="/admin/pedidos/">
+                <b-button variant="primary">Ver Pedidos</b-button>
+            </router-link>
         </div>
     </div>
 </template>
