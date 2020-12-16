@@ -26,11 +26,22 @@ export default {
     return {
         carrito : [
         ],
+        pedidos: [],
         usuario: localStorage.getItem('usuario'),
         usuario_admin: false, // puede ser true or false
     }
   },
   methods: {
+    guardarPedidos: function() {
+      if(this.pedidos) {
+        localStorage.setItem('pedidos', JSON.stringify(this.carrito))
+      } else {
+        localStorage.setItem(this.pedidos, JSON.stringify([]))
+      }
+    },
+    cargarPedidos: function() {
+      this.pedidos = JSON.parse(localStorage.getItem('pedidos'))
+    },
     guardarCarrito: function() {
       if(this.carrito) {
         localStorage.setItem('carrito', JSON.stringify(this.carrito))
@@ -61,6 +72,7 @@ export default {
   created() {
     this.cargarCarrito()
     this.cargarUsuario()
+    this.cargarCarrito()
   },
   watch: {
     carrito: function () {
@@ -68,7 +80,10 @@ export default {
     },
     $route (){
         this.cargarUsuario() // revisamos el usuario cada vez que el route cambia
-    }
+    },
+    pedidos: function() {
+      this.guardarPedidos()
+    },
   },
 }
 </script>
