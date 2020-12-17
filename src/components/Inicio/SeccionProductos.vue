@@ -1,7 +1,7 @@
 <template>
   <div class="seccion-productos">
     <router-link class="nav-link" active-class="active" to="/productos">
-        <b-card  bg-variant="secondary" text-variant="white" v-bind:img-src="imagenSeccion" img-alt="Seccion de Ventas" img-top>
+        <b-card text-variant="dark" v-bind:img-src="imagenSeccion" img-height="180" img-width="485" img-alt="Seccion de Ventas" img-top>
             <b-card-text text-tag="h3">
                 {{nombreSeccion}}
             </b-card-text>
@@ -29,6 +29,8 @@ export default {
   .seccion-productos {
     .card {
       border-radius: 5%;
+      overflow: hidden;
+      background-color: #e5ffff;
     }
   }
   

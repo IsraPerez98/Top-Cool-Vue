@@ -20,11 +20,14 @@
 
 import SeccionProductos from './SeccionProductos.vue'
 
-import imagenMasVendidos from '@/assets/imgs/Inicio/SeccionesProductos/MasVendidos.png'
-import imagenBlusas from '@/assets/imgs/Inicio/SeccionesProductos/Blusas.png'
+import imagenMascarillas from '@/assets/imgs/Inicio/SeccionesProductos/Mascarillas.jpeg'
+import imagenBlusas from '@/assets/imgs/Inicio/SeccionesProductos/Blusas.jpg'
 //import imagenProfe from '@/assets/imgs/Inicio/SeccionesProductos/Profe.png'
-import imagenChaquetas from '@/assets/imgs/Inicio/SeccionesProductos/Chaquetas.png'
+import imagenChaquetas from '@/assets/imgs/Inicio/SeccionesProductos/Chaquetas.jpg'
 import imagenPantalones from '@/assets/imgs/Inicio/SeccionesProductos/Pantalones.png'
+import imagenVestidos from '@/assets/imgs/Inicio/SeccionesProductos/Vestidos.jpg'
+import imagenInfantil from '@/assets/imgs/Inicio/SeccionesProductos/Infantil.jpg'
+
 
 export default {
   name: 'Inicio',
@@ -35,8 +38,8 @@ export default {
     return {
       seccionesDisponibles: [
         {
-            nombreSeccion: "Los Mas Vendidos",
-            imagenSeccion: imagenMasVendidos,
+            nombreSeccion: "Mascarillas",
+            imagenSeccion: imagenMascarillas,
         },
         {
             nombreSeccion: "Blusas",
@@ -50,6 +53,14 @@ export default {
             nombreSeccion: "Pantalones",
             imagenSeccion: imagenPantalones,
         },
+        {
+          nombreSeccion: "Infantil",
+          imagenSeccion: imagenInfantil,
+        },
+        {
+          nombreSeccion: "Vestidos",
+          imagenSeccion: imagenVestidos,
+        }
       ]
     }
   }
