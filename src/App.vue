@@ -94,12 +94,12 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  background-color: #FAE8FF;
+  color: #000000;
+  background-color: #ffffff;
 
   .contenido {
     min-height: calc(100vh - 109px);
-    margin-top: 60px;
+    margin-top: 100px;
     padding-top: 20px;
     padding-bottom: 20px;
   }
