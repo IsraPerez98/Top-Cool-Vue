@@ -47,21 +47,22 @@ export default {
     }
   },
   components: {
-  }
+  } 
 }
 </script>
 
 <style scoped lang="scss">
   .productos-destacados {
-    background-color: #2c3e50;
-    width: 90%;
-    margin: auto;
-    margin-top: 0px;
+    
+    background-color: #bdbdbd;
+    border-radius: 20px;
+    color: black;
     padding-top: 10px;
-    padding-bottom: 50px;
+    padding-bottom: 10px;
+
 
     h2 {
-      color: white;
+      color: black;
     }
     .carousel {
       margin: auto;
