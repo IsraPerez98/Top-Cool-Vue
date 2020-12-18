@@ -72,7 +72,7 @@ export default {
   created() {
     this.cargarCarrito()
     this.cargarUsuario()
-    this.cargarCarrito()
+    this.cargarPedidos()
   },
   watch: {
     carrito: function () {
