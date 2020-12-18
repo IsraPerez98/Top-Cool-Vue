@@ -98,7 +98,7 @@ export default {
   background-color: #ffffff;
 
   .contenido {
-    min-height: calc(100vh - 109px);
+    min-height: calc(100vh - 149px);
     margin-top: 100px;
     padding-top: 20px;
     padding-bottom: 20px;
