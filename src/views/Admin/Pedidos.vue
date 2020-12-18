@@ -5,10 +5,10 @@
             <b-container class="pedidos">
                 <h1 class="titulo">Pedidos realizados por los clientes:</h1>
                 <b-container class="pedidos-bloque" id="pedidos" >
-                    <b-container class="pedidos-cliente" v-for="(productos, usuario) in pedidos" v-bind:key="usuario">
+                    <b-container class="pedidos-cliente" v-for="(peds, usuario) in pedidos" v-bind:key="usuario">
                         <h2>Pedidos realizados por <span>{{usuario}}</span></h2>
-                        <b-container class="pedido">
-                            <h3>Pedido N° 1 de {{usuario}}</h3>
+                        <b-container class="pedido" v-for="(productos, pedido) in peds" v-bind:key="pedido">
+                            <h3>Pedido N° {{pedido}} de {{usuario}}</h3>
                             <b-row class="producto" v-for="(producto, index) in productos" v-bind:key="index">
                                 <Producto
                                     v-bind:nombre="producto.nombre"
@@ -59,6 +59,7 @@ export default {
             padding-bottom: 10px;
 
             .pedido {
+                color: white;
                 background-color: #8d8d8d;
                 border-radius: 4px;
                 padding-top: 10px;
