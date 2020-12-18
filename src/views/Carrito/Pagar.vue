@@ -56,7 +56,13 @@ export default {
               alert("Debe registrarse con una cuenta para realizar el pedido")
               this.$router.push('/login/')
           } else {
-              this.pedidos[this.usuario] = this.carrito
+              if(!(this.pedidos)) {
+                  this.pedidos = {}
+              }
+              if(!(this.usuario in this.pedidos)) {
+                  this.pedidos[this.usuario] = {}
+              }
+              this.pedidos[this.usuario][this.idPedido.toString()] = this.carrito
               console.log(this.pedidos)
               localStorage.setItem('pedidos', JSON.stringify(this.pedidos)) // esto esta en App.vue, pero por alguna razon el watch no funciona
           }
