@@ -12,7 +12,7 @@
             v-bind:preciosEspeciales="producto.preciosEspeciales"
             v-bind:id="producto.id"
           />
-          <button type="button" class="btn-eliminar btn-danger" v-on:click="eliminarDeCarro(event,index)">Eliminar</button>
+          <button type="button" class="btn-eliminar btn-danger" v-on:click="eliminarDeCarro(index)">Eliminar</button>
         </b-row>
       </b-container>
       <h2>Precio Total: {{precioTotal}} </h2>
@@ -50,13 +50,10 @@ export default {
     carrito: Array,
   },
   methods: {
-    eliminarDeCarro: function(event, id) {
+    eliminarDeCarro: function(id) {
       this.carrito.splice(id,1)
       console.log(this.carrito)
-      if(event) {
-        console.log(event)
-      }
-    }
+    },
   },
   data: function() {
     let data = {}
