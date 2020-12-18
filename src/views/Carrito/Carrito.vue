@@ -54,17 +54,23 @@ export default {
       this.carrito.splice(id,1)
       console.log(this.carrito)
     },
+    calcularPrecioTotal: function() {
+      let precio_total = 0
+      this.carrito.forEach(producto => {
+        precio_total = precio_total + producto.precio
+      })
+      return(precio_total)
+    }
   },
   data: function() {
-    let data = {}
-
-    data.precioTotal = 0
-
-    this.carrito.forEach(producto => {
-      data.precioTotal = data.precioTotal + producto.precio
-    });
-
-    return data
+    return {
+      precioTotal: this.calcularPrecioTotal()
+    }
+  },
+  watch: {
+    carrito: function() {
+      this.precioTotal = this.calcularPrecioTotal()
+    }
   }
   
 }
