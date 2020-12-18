@@ -6,7 +6,7 @@
       :interval="4000"
       controls
       indicators
-      background="#343a40"
+      background="#fce4ef"
       >
       <b-carousel-slide v-for="(comentario, index) in comentarios_destacados " v-bind:key="index">
           <template #img>
@@ -37,12 +37,12 @@ export default {
     return {
       comentarios_destacados: [
         {
-            nombrePersona: "Huevito Rey",
-            comentarioEscrito: "mala tu wea xd",
+            nombrePersona: "María Saavedra",
+            comentarioEscrito: "Los mejores Productos! Todo Perfecto",
         },
         {
-            nombrePersona: "Choche",
-            comentarioEscrito: "Basta de hablar de Pinochet",
+            nombrePersona: "Sandra Olivares",
+            comentarioEscrito: "Excelente Atención, un 7 todo!",
         }
       ]
     }
@@ -58,7 +58,7 @@ export default {
         width: 90%;
         margin-bottom: 20px;
         margin-top: 50px;
-        color: white;
+        color: black;
 
         h2 {
           color: black;

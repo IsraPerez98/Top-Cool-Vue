@@ -32,6 +32,7 @@
             size="3x"
           />
         </router-link>
+        
       </div>
     </b-row>
   </footer>

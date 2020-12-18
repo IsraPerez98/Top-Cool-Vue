@@ -11,7 +11,14 @@
                             <router-link class="nav-link" active-class="active" to="/productos">Productos</router-link>
                         </li>
                         <li class="nav-item" v-if="!(usuario_admin)">
-                            <router-link class="nav-link" active-class="active" to="/carrito" >Carrito</router-link>
+                           <router-link class="nav-link" active-class="active" to="/carrito">
+                            <font-awesome-icon
+                                 v-b-tooltip.hover.top="'Tu carrito de compras!'"
+                                 class="mr-2 ml-2"
+                                 icon="shopping-cart"
+                                size="2x"
+                             />
+                            </router-link>
                         </li>
                     </b-navbar-nav>
                         <b-navbar-brand href="/" class="ml-auto" >

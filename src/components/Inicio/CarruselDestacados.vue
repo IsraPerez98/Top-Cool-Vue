@@ -54,7 +54,7 @@ export default {
 <style scoped lang="scss">
   .productos-destacados {
     
-    background-color: #bdbdbd;
+    background-color: #fce4ef;
     border-radius: 20px;
     color: black;
     padding-top: 10px;
