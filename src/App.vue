@@ -57,7 +57,9 @@ export default {
     usuarioEsAdmin: function() {
       if(this.usuario == "Admin") {
         this.usuario_admin = true
-        console.log(this.usuario, " es admin")
+        //console.log(this.usuario, " es admin")
+      } else {
+        this.usuario_admin = false
       }
     },
     cargarUsuario: function() {
