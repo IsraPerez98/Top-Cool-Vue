@@ -9,6 +9,7 @@ export default [
         tallas: ["s", "m", "l", "xl"],
         precio: 7990,
         preciosEspeciales: [{"Por Mayor": 5990},],
+        categoria: 'Vestidos',
         id: 0,
     },
     {
@@ -18,6 +19,7 @@ export default [
         tallas: ["s","m","l","xl"],
         precio: 3000,
         preciosEspeciales: [],
+        categoria: 'Mascarillas',
         id: 1,
     },
 ]

@@ -20,7 +20,13 @@ const routes = [
     component: Inicio,
   },
   {
-    path: '/productos',
+    path: '/productos/:categoria',
+    name: 'Productos - Categoria',
+    component: Productos,
+    props: true,
+  },
+  {
+    path: '/productos/',
     name: 'Productos',
     component: Productos,
   },
