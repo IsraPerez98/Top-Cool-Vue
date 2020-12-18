@@ -34,10 +34,16 @@ export default {
             display: flex;
             flex-direction: column;
 
-            button {
+            .nav-link {
+
+                width: fit-content;
                 margin: auto;
-                margin-top: 10px;
-                margin-bottom: 10px;
+
+                button {
+                    margin: auto;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                }
             }
         }
     }
