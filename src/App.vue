@@ -82,6 +82,7 @@ export default {
     },
     $route (){
         this.cargarUsuario() // revisamos el usuario cada vez que el route cambia
+        window.scrollTo(0, 0) // cuando cambiamos el route, iniciamos la pagina desde arriba
     },
     pedidos: function() {
       this.guardarPedidos()
