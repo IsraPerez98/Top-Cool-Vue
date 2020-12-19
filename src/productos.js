@@ -1,4 +1,3 @@
-import imagenAbrigoAnimalPrint from '@/assets/imgs/Productos/vestidos/AbrigoAnimalPrint.png'
 import imagenMascarillas from '@/assets/imgs/Productos/mascarillas/Mascarillas.png'
 import Mascarilla1 from '@/assets/imgs/Productos/mascarillas/mascarilla1.png'
 import Mascarilla2 from '@/assets/imgs/Productos/mascarillas/mascarilla2.png'
@@ -6,18 +5,32 @@ import Mascarilla3 from '@/assets/imgs/Productos/mascarillas/mascarilla3.png'
 import Mascarilla4 from '@/assets/imgs/Productos/mascarillas/mascarilla4.png'
 import Mascarilla5 from '@/assets/imgs/Productos/mascarillas/mascarilla5.png'
 import Blusa1 from '@/assets/imgs/Productos/blusas/blusa1.png'
+import Blusa2 from '@/assets/imgs/Productos/blusas/blusa2.png'
+import Blusa3 from '@/assets/imgs/Productos/blusas/blusa3.png'
+import Blusa4 from '@/assets/imgs/Productos/blusas/blusa4.png'
+import Blusa5 from '@/assets/imgs/Productos/blusas/blusa5.png'
+import Chaqueta1 from '@/assets/imgs/Productos/chaquetas/Chaqueta1.jpg'
+import Chaqueta2 from '@/assets/imgs/Productos/chaquetas/Chaqueta2.jpg'
+import Chaqueta3 from '@/assets/imgs/Productos/chaquetas/Chaqueta3.jpg'
+import Chaqueta4 from '@/assets/imgs/Productos/chaquetas/Chaqueta4.jpg'
+import Pantalones1 from '@/assets/imgs/Productos/pantalones/Pantalones1.jpg'
+import Pantalones2 from '@/assets/imgs/Productos/pantalones/Pantalones2.jpg'
+import Pantalones3 from '@/assets/imgs/Productos/pantalones/Pantalones3.jpg'
+import Pantalones4 from '@/assets/imgs/Productos/pantalones/Pantalones4.jpg'
+import Pantalones5 from '@/assets/imgs/Productos/pantalones/Pantalones5.jpg'
+import Vestidos1 from '@/assets/imgs/Productos/vestidos/Vestido1.jpg'
+import Vestidos2 from '@/assets/imgs/Productos/vestidos/Vestido2.jpg'
+import Vestidos3 from '@/assets/imgs/Productos/vestidos/Vestido3.jpg'
+import Vestidos4 from '@/assets/imgs/Productos/vestidos/Vestido4.jpg'
+import Vestidos5 from '@/assets/imgs/Productos/vestidos/Vestido5.jpg'
+import Infantil1 from '@/assets/imgs/Productos/infantil/Infantil1.jpg'
+import Infantil2 from '@/assets/imgs/Productos/infantil/Infantil2.jpg'
+import Infantil3 from '@/assets/imgs/Productos/infantil/Infantil3.jpg'
+import Infantil4 from '@/assets/imgs/Productos/infantil/Infantil4.jpg'
+import Infantil5 from '@/assets/imgs/Productos/infantil/Infantil5.jpg'
+
 
 export default [
-    {
-        nombre: "Abrigo animal print",
-        descripcion: "Descripcion no disponible",
-        imagenes: [imagenAbrigoAnimalPrint,],
-        tallas: ["S","M","L", "XL"],
-        precio: 7990,
-        preciosEspeciales: [{"Por Mayor": 5990},],
-        categoria: 'Vestidos',
-        id: 0,
-    },
     {
         nombre: "Mascarillas distintos colores y diseños",
         descripcion: "Forradas en lycra polyamyda elastano una tela antitranspirante y antibacterial de secado rápido y por fuera son de tela porosa opaca.  Pasan la prueba del spray",
@@ -87,5 +100,235 @@ export default [
         preciosEspeciales:[],
         categoria: 'Blusas',
         id: 7,
+    },
+    {
+        nombre: "Blusa roja",
+        descripcion: "blusa",
+        imagenes: [Blusa2],
+        tallas:["S","M","L","XL"],
+        precio: 5990,
+        preciosEspeciales:[],
+        categoria: 'Blusas',
+        id: 8,
+    },
+    {
+        nombre: "Blusa blanca",
+        descripcion: "blusa",
+        imagenes: [Blusa3],
+        tallas:["S","M","L","XL"],
+        precio: 5990,
+        preciosEspeciales:[],
+        categoria: 'Blusas',
+        id: 9,
+    },
+    {
+        nombre: "Blusa rosada",
+        descripcion: "blusa",
+        imagenes: [Blusa4],
+        tallas:["S","M","L","XL"],
+        precio: 5990,
+        preciosEspeciales:[],
+        categoria: 'Blusas',
+        id: 10,
+    },
+    {
+        nombre: "Blusa azul",
+        descripcion: "blusa",
+        imagenes: [Blusa5],
+        tallas:["S","M","L","XL"],
+        precio: 5990,
+        preciosEspeciales:[],
+        categoria: 'Blusas',
+        id: 11,
+    },
+    {
+        nombre: "Chaqueta mezclilla con gorro",
+        descripcion: "chaqueta",
+        imagenes: [Chaqueta1],
+        tallas:["S","M","L","XL"],
+        precio: 5990,
+        preciosEspeciales:[],
+        categoria: 'Chaquetas',
+        id: 12,
+    },
+    {
+        nombre: "Tapado azul con diseño",
+        descripcion: "blusa",
+        imagenes: [Chaqueta2],
+        tallas:["S","M","L","XL"],
+        precio: 5990,
+        preciosEspeciales:[],
+        categoria: 'Chaquetas',
+        id: 13,
+    },
+    {
+        nombre: "Tapado rojo con diseño",
+        descripcion: "blusa",
+        imagenes: [Chaqueta3],
+        tallas:["S","M","L","XL"],
+        precio: 5990,
+        preciosEspeciales:[],
+        categoria: 'Chaquetas',
+        id: 14,
+    },
+    {
+        nombre: "Tapado negro",
+        descripcion: "blusa",
+        imagenes: [Chaqueta4],
+        tallas:["S","M","L","XL"],
+        precio: 5990,
+        preciosEspeciales:[],
+        categoria: 'Chaquetas',
+        id: 15,
+    },
+    {
+        nombre: "Jeans mujer azul",
+        descripcion: "Jeans",
+        imagenes: [Pantalones1],
+        tallas:["S","M","L","XL"],
+        precio: 5990,
+        preciosEspeciales:[],
+        categoria: 'Pantalones',
+        id: 16,
+    },
+    {
+        nombre: "Jeans mujer azul",
+        descripcion: "Jeans",
+        imagenes: [Pantalones2],
+        tallas:["S","M","L","XL"],
+        precio: 5990,
+        preciosEspeciales:[],
+        categoria: 'Pantalones',
+        id: 17,
+    },
+    {
+        nombre: "Falda mezclilla elasticada",
+        descripcion: "Jeans",
+        imagenes: [Pantalones3],
+        tallas:["S","M","L","XL"],
+        precio: 5990,
+        preciosEspeciales:[],
+        categoria: 'Pantalones',
+        id: 18,
+    },
+    {
+        nombre: "Pantalon cuero negro",
+        descripcion: "Jeans",
+        imagenes: [Pantalones4],
+        tallas:["S","M","L","XL"],
+        precio: 5990,
+        preciosEspeciales:[],
+        categoria: 'Pantalones',
+        id: 19,
+    },
+    {
+        nombre: "Calza mujer negro",
+        descripcion: "Jeans",
+        imagenes: [Pantalones5],
+        tallas:["S","M","L","XL"],
+        precio: 5990,
+        preciosEspeciales:[],
+        categoria: 'Pantalones',
+        id: 20,
+    },
+    {
+        nombre: "Vestido naranja con diseño",
+        descripcion: "Vestidos",
+        imagenes: [Vestidos1],
+        tallas:["S","M","L","XL"],
+        precio: 5990,
+        preciosEspeciales:[],
+        categoria: 'Vestidos',
+        id: 21,
+    },
+    {
+        nombre: "Vestido azul con diseño",
+        descripcion: "Vestidos",
+        imagenes: [Vestidos2],
+        tallas:["S","M","L","XL"],
+        precio: 5990,
+        preciosEspeciales:[],
+        categoria: 'Vestidos',
+        id: 22,
+    },
+    {
+        nombre: "Vestido rosado con diseño",
+        descripcion: "Vestidos",
+        imagenes: [Vestidos3],
+        tallas:["S","M","L","XL"],
+        precio: 5990,
+        preciosEspeciales:[],
+        categoria: 'Vestidos',
+        id: 23,
+    },
+    {
+        nombre: "Vestido azul marino con diseño",
+        descripcion: "Vestidos",
+        imagenes: [Vestidos4],
+        tallas:["S","M","L","XL"],
+        precio: 5990,
+        preciosEspeciales:[],
+        categoria: 'Vestidos',
+        id: 24,
+    },
+    {
+        nombre: "Vestido largo azul",
+        descripcion: "Vestidos",
+        imagenes: [Vestidos5],
+        tallas:["S","M","L","XL"],
+        precio: 5990,
+        preciosEspeciales:[],
+        categoria: 'Vestidos',
+        id: 25,
+    },
+    {
+        nombre: "Vestido bebé rosado",
+        descripcion: "Infantil ",
+        imagenes: [Infantil1],
+        tallas:["9-12 Meses","3 Años","+3 Años"],
+        precio: 5990,
+        preciosEspeciales:[],
+        categoria: 'Infantil',
+        id: 26,
+    },
+    {
+        nombre: "Vestido niña rosado",
+        descripcion: "Infantil ",
+        imagenes: [Infantil2],
+        tallas:["6 Meses","9 Meses","18 Meses","24 Meses"],
+        precio: 5990,
+        preciosEspeciales:[],
+        categoria: 'Infantil',
+        id: 27,
+    },
+    {
+        nombre: "Vestido niña cpn tirantes",
+        descripcion: "Infantil ",
+        imagenes: [Infantil3],
+        tallas:["6 Meses","9 Meses","18 Meses","24 Meses"],
+        precio: 5990,
+        preciosEspeciales:[],
+        categoria: 'Infantil',
+        id: 28,
+    },
+    {
+        nombre: "Chaleco niño botones azul",
+        descripcion: "Infantil ",
+        imagenes: [Infantil4],
+        tallas:["6 Meses","9 Meses","18 Meses","24 Meses"],
+        precio: 5990,
+        preciosEspeciales:[],
+        categoria: 'Infantil',
+        id: 29,
+    },
+    {
+        nombre: "Chaqueta niño de mezquilla azul ",
+        descripcion: "Infantil ",
+        imagenes: [Infantil5],
+        tallas:["6 Meses","9 Meses","18 Meses","24 Meses"],
+        precio: 5990,
+        preciosEspeciales:[],
+        categoria: 'Infantil',
+        id: 30,
     },
 ]

@@ -21,8 +21,9 @@
         <p class="info-extra">{{infoExtra}}</p>
         <p class="tallas-producto-titulo">Tallas: </p>
         <ul class="tallas-producto" id="dataProducto.tallas" style="list-style-type:none; padding:0;">
-          <li v-for="(talla, index) in dataProducto.tallas" v-bind:key="index">
-            {{talla.toUpperCase()}}
+          <li v-for="(talla, index) in dataProducto.tallas" v-bind:key="index" v-on:click="seleccionarTalla(talla)">
+            <button class="boton-talla seleccionada" v-if="dataProducto.tallaSeleccionada === talla">{{talla.toUpperCase()}}</button>
+            <button class="boton-talla no-seleccionada" v-else>{{talla.toUpperCase()}}</button>
           </li>
         </ul>
         <ul class="precios-especiales" id="dataProducto.preciosEspeciales" style="list-style-type:none; padding:0;">
@@ -70,30 +71,29 @@ export default {
       if(event) {
         console.log(event)
       }
+    },
+    seleccionarTalla: function(talla) {
+      this.dataProducto.tallaSeleccionada = talla
     }
   },
   data: function() {
 
-    /*
-    return {
-      nombreProducto: "Aaaa",
-      descripcionProducto: "xd",
-      imagenesProducto: ["https://media.tenor.com/images/9329736b88def63c841754e8ccbe4da0/tenor.png","https://ohmygeek.net/wp-content/uploads/2018/06/Huevito-Rey-960x464.jpg"],
-      imagenSeleccionada: 0,
-      tallasProducto: ["xl", "l"],
-      precioProducto: 3000,
-    }
-    */
+    const id_seleccionado = this.$route.params.id
 
-    let data = {
+    function productoSeleccionado(producto) {
+      return producto.id == id_seleccionado
+    }
+
+    let dataProducto = productos.find(productoSeleccionado)
+
+    dataProducto.tallaSeleccionada = "xl"
+
+    return {
       imagenSeleccionada: 0,
       enCarro: 0,
       infoExtra: "Estamos ubicados en Av.Alguna #3722 en el 4to piso del edificio B en la habitacion 453 pero podemos mandar a domicilio tu pedido.",
-      dataProducto: {},
+      dataProducto,
     }
-
-    data.dataProducto = productos[this.$route.params.id];
-    return data
 
   },
   
