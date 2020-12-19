@@ -12,7 +12,15 @@
             v-bind:preciosEspeciales="producto.preciosEspeciales"
             v-bind:id="producto.id"
           />
-          <button type="button" class="btn-eliminar btn-danger" v-on:click="eliminarDeCarro(index)">Eliminar</button>
+          <b-container class="detalles">
+            <b-col class="talla-seleccionada">
+              Talla Seleccionada:
+              <span>{{producto.tallaSeleccionada}}</span>
+            </b-col>
+            <b-col class="botones">
+              <button type="button" class="btn-eliminar btn-danger" v-on:click="eliminarDeCarro(index)">Eliminar</button>
+            </b-col>
+          </b-container>
         </b-row>
       </b-container>
       <h2>Precio Total: {{precioTotal}} </h2>
@@ -82,15 +90,24 @@ export default {
     .productos {
       
       .row-producto {
-        margin-top: 10px;
-        margin-bottom: 10px;
+        margin-top: 25px;
+        margin-bottom: 25px;
         background-color: rgba(0,0,0,0.2);
         border-radius: 10px;
         padding: 10px;
-        .btn-eliminar {
-          margin: auto;
-          border-radius: 4px;
-          border: none;
+        
+        .detalles {
+          .talla-seleccionada {
+            span {
+              font-size: 14px;
+              font-weight: bold;
+            }
+          }
+          .btn-eliminar {
+            margin: auto;
+            border-radius: 4px;
+            border: none;
+          }
         }
       }
     }
