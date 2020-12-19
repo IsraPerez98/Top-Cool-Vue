@@ -9,7 +9,7 @@
                         <h2>Pedidos realizados por <span>{{usuario}}</span></h2>
                         <b-container class="pedido" v-for="(productos, pedido) in peds" v-bind:key="pedido">
                             <h3>Pedido N° {{pedido}} de {{usuario}}</h3>
-                            <b-row class="producto" v-for="(producto, index) in productos" v-bind:key="index">
+                            <b-row class="producto bg-secondary" v-for="(producto, index) in productos" v-bind:key="index">
                                 <Producto
                                     v-bind:nombre="producto.nombre"
                                     v-bind:descripcion="producto.descripcion"
@@ -19,6 +19,13 @@
                                     v-bind:preciosEspeciales="producto.preciosEspeciales"
                                     v-bind:id="producto.id"
                                 />
+                                <b-container class="detalles">
+                                    <h5>Detalles:</h5>
+                                    <b-col class="talla">
+                                        <h6>Talla Solicitada</h6>
+                                        <span>{{producto.tallaSeleccionada}}</span>
+                                    </b-col>
+                                </b-container>
                             </b-row>
                         </b-container>
                     </b-container>
@@ -64,6 +71,23 @@ export default {
                 border-radius: 0px;
                 padding-top: 10px;
                 padding-bottom: 10px;
+
+                .producto {
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                    margin-left: 10px;
+                    margin-right: 10px;
+                    border-radius: 20px;
+
+                    .detalles {
+                        .talla {
+                            span {
+                                font-size: 20px;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
