@@ -39,7 +39,7 @@ export default {
         "Rut": "121232-2",
         "Banco": "bancobla",
         "Cuenta": "1213212312",
-        "Comentario": data.idPedido,
+        "Comentario": data.idPedido,    
     }
     
     data.datosTransferencia["Monto A Pagar"] = 0
