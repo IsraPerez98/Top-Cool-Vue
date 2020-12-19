@@ -52,16 +52,16 @@ export default {
 
         .pedidos-cliente {
             background-color: #efefef;
-            margin-top: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            padding-top: 10px;
-            padding-bottom: 10px;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            padding-top: 20px;
+            padding-bottom: 20px;
 
             .pedido {
                 color: white;
                 background-color: #8d8d8d;
-                border-radius: 4px;
+                border-radius: 0px;
                 padding-top: 10px;
                 padding-bottom: 10px;
             }

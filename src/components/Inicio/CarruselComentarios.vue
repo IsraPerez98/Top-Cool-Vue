@@ -6,7 +6,7 @@
       :interval="4000"
       controls
       indicators
-      background="#fce4ef"
+      background="#C4C4C4"
       >
       <b-carousel-slide v-for="(comentario, index) in comentarios_destacados " v-bind:key="index">
           <template #img>

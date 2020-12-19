@@ -30,7 +30,7 @@ export default {
     .card {
       border-radius: 5%;
       overflow: hidden;
-      background-color: #fce4ef;
+      background-color: #C4C4C4;
     }
   }
   
