@@ -99,7 +99,7 @@ export default {
         .detalles {
           .talla-seleccionada {
             span {
-              font-size: 14px;
+              font-size: 20px;
               font-weight: bold;
             }
           }
