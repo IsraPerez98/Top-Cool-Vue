@@ -43,8 +43,8 @@
                             <router-link class="nav-link" active-class="active" to="/contacto" >Contacto</router-link>
                         </li>
                         -->
-                        <li class="nav-item">
-                            <router-link class="nav-link" active-class="active" to="/ClienteDatos">Datos Personales</router-link>
+                        <li class="nav-item" v-if="usuario">
+                            <router-link class="nav-link" active-class="active" to="/cliente/datos/">Datos Personales</router-link>
                         </li>
                         <li class="nav-item panel-admin" v-if="usuario_admin">
                             <router-link class="nav-link" active-class="active" to="/admin" >Panel Admin</router-link>
