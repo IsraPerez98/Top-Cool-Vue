@@ -43,6 +43,9 @@
                             <router-link class="nav-link" active-class="active" to="/contacto" >Contacto</router-link>
                         </li>
                         -->
+                        <li class="nav-item">
+                            <router-link class="nav-link" active-class="active" to="/ClienteDatos">Datos Personales</router-link>
+                        </li>
                         <li class="nav-item panel-admin" v-if="usuario_admin">
                             <router-link class="nav-link" active-class="active" to="/admin" >Panel Admin</router-link>
                         </li>
@@ -80,6 +83,11 @@ export default {
 <style scoped lang="scss">
     .barra-superior {
         height: 0px;
+
+        .nav-link {
+            margin-left: 5px;
+            margin-right: 5px;
+        }
 
         .usuario {
             color: #007bff;
