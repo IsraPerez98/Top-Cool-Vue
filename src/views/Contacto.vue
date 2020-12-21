@@ -31,6 +31,69 @@
       aria-hidden="false"
       tabindex="0"
     ></iframe>
+    <b-container class="comentario">
+      <h1>Deja Tu Comentario</h1>
+      <form>
+        <div class="mt-5">
+          <div class="mb-3">
+              <label>Nombre<span class="red">*</span></label>
+              <input type="text" class="form-control" required>
+          </div>
+        </div>
+
+      <!-- <div class="form-row">
+        <div class="col-md-4 mb-3">
+            <label for="validarApellidos">Apellidos:<span class="red">*</span></label>
+            <input type="text" class="form-control" id="validarApellidos" name="validarApellidos" required>
+        </div>
+      </div> -->
+
+      <!-- <div class="form-row">
+        <div class="col-md-4 mb-3">
+            <label for="validarEmail">Email:<span class="red">*</span></label>
+            <input type="email" class="form-control" id="validarEmail" name="validarEmail" required>
+        </div>
+      </div> -->
+
+      <!-- <div class="form-row">
+        <div class="col-md-4 mb-3">
+            <label for="validarTelefono">Teléfono:</label>
+            <input type="number" class="form-control" id="validarTelefono" name="validarTelefono" max="999999999">
+        </div>
+      </div> -->
+
+        <div>
+          <div class="mb-3">
+            <label>Tema:<span class="red">*</span></label>
+            <select class="custom-select" required>
+                <option selected disabled value="">Selecciona...</option>
+                <option value="Problema con el envio de Productos">Problema con el envio de Producto(s)</option>
+                <option value="Opinion sobre nuestra web">Opinion sobre nuestra web</option>
+                <option value="Consultas">Consultas</option>
+                <option value="Reclamos">Reclamos</option>
+                <option value="Otros">Otros</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <div class="mb-3">
+            <label>Asunto:</label>
+            <input type="text" class="form-control" required>
+          </div>
+        </div>
+
+        <div class="mb-5">
+          <label>Mensaje:<span class="red">*</span></label>
+          <textarea class="form-control" rows="5" min="25" required></textarea>
+        </div>
+
+        <div class="mb-10">
+          <button class="btn btn-primary" type="submit" name="submit">Enviar</button>
+          <button class="btn btn-success" type="reset" name="reset">Limpiar</button>
+        </div>
+      </form>
+    </b-container>
   </div>
 </template>
 
@@ -68,6 +131,13 @@ export default {
   .mapa {
     margin-top: 20px;
     margin-bottom: 10px;
+  }
+
+  .comentario {
+    width: 100%;
+    min-width: 300px;
+    max-width: 600px;
+    margin: auto;
   }
 }
 </style>
