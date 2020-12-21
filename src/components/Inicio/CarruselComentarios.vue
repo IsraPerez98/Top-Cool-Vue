@@ -43,7 +43,11 @@ export default {
         {
             nombrePersona: "Sandra Olivares",
             comentarioEscrito: "Excelente Atención, un 7 todo!",
-        }
+        },
+        {
+            nombrePersona: "Luís Rivas",
+            comentarioEscrito: "Muy buena atención, le compré un regalo a mi polola y le encantó, todo muy bueno, 100% recomendable, volveré a comprar acá",
+        },
       ]
     }
   },
