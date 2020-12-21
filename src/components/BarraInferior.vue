@@ -2,7 +2,7 @@
   <footer class="barra-inferior mb-0">
     <b-row class="mx-auto">
       <h6 class="mx-3 my-auto">
-        Top Cool © {{ new Date().getFullYear() }} | Powered by Grupo 4 TSI UTEM
+        Top Cool © {{ new Date().getFullYear() }} | Desarrollado por Grupo 4 TSI UTEM
       </h6>
       <!-- <b-navbar-nav class="contacto">
         <li class="nav-item">
