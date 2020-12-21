@@ -21,6 +21,7 @@
             </b-form-group>
 
             <b-button type="submit" variant="primary">Login</b-button>
+            <b-button variant="success">Registrarse</b-button>
         </b-form>
         <div class="ya-logeado" v-else>
             <h1>Ya se ha hecho Login</h1>
@@ -63,5 +64,9 @@ export default {
         width: 50%;
         margin: auto;
         min-width: 200px;
+
+        button {
+            margin: 15px;
+        }
     }
 </style>
