@@ -13,16 +13,16 @@
         <b-col class="col-body" md="6">
           <b-card-body class="body-tarjeta-contacto">
             <h1>CONTÁCTANOS!</h1>
-            <h4>FONO: +696969696969</h4>
+            <h4>FONO: +56930166361</h4>
             <h4>CORREO: contacto@topcool.cl</h4>
-            <h4>DIRECCIÓN: Calle Falsa #1234</h4>
+            <h4>DIRECCIÓN: El Molino 1845, 407 torre A, Independencia, Región Metropolitana</h4>
           </b-card-body>
         </b-col>
       </b-row>
     </b-card>
     <iframe
       class="mapa"
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3790.2869945843895!2d-70.5991458199692!3d-33.46623914647626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cfc270900eb7%3A0x330e0d87329f4a5f!2sUniversidad%20Tecnol%C3%B3gica%20Metropolitana%2C%20Campus%20Macul!5e0!3m2!1ses-419!2scl!4v1607725920453!5m2!1ses-419!2scl"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2354.8153437115707!2d-70.66698283139688!3d-33.4177221861201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c5cdae93e78d%3A0x73ddfa4b1c03a01e!2sCondominio%20Parque%20Vivaceta%20III!5e0!3m2!1ses-419!2scl!4v1608595389403!5m2!1ses-419!2scl"
       width="80%"
       height="300px"
       frameborder="1"
@@ -138,6 +138,10 @@ export default {
     min-width: 300px;
     max-width: 600px;
     margin: auto;
+
+    button {
+      margin: 15px;
+    }
   }
 }
 </style>
